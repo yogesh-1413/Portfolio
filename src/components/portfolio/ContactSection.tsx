@@ -108,7 +108,7 @@ export function ContactSection() {
 
                     </Button>
                     <Button size="icon" variant="outline" className="hover:bg-primary hover:text-primary-foreground"
-                      onClick={()=> window.open("https://www.linkedin.com/in/yogeshwarao/","_blank")}
+                      onClick={()=> window.open("https://leetcode.com/u/Yogesh1413/","_blank")}
                       title="LeetCode"
                     >
                       <Code className="w-5 h-5" />
