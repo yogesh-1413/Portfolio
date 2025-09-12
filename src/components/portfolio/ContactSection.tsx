@@ -52,9 +52,9 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-1 gap-12">
             <div className="space-y-8">
-              <div className="portfolio-card p-8">
+              <div className="portfolio-card p-8 items-center">
                 <h3 className="text-2xl font-semibold text-foreground mb-6">
                   Let's Connect
                 </h3>
@@ -118,7 +118,7 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="portfolio-card p-8">
+            {/* <div className="portfolio-card p-8">
               <h3 className="text-2xl font-semibold text-foreground mb-6">
                 Send a Message
               </h3>
@@ -191,7 +191,7 @@ export function ContactSection() {
                   )}
                 </Button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

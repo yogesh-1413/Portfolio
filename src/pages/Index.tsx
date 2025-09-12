@@ -24,14 +24,11 @@ const Index = () => {
         <ContactSection />
       </main>
       
-      <footer className="bg-foreground text-background py-8">
+      <footer className="bg-gradient-to-r from-primary to-accent text-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm">
-            © 2024 Yogesh. Built with React, TypeScript, and Tailwind CSS.
+            © 2025 Yogesh. Built with React, TypeScript, and Tailwind CSS.
           </p>
-          {/* <p className="text-xs mt-2 opacity-70">
-            Designed and developed with ❤️ for showcasing my journey in Computer Science
-          </p> */}
         </div>
       </footer>
     </div>
