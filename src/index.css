@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    /* Primary Brand - Tech Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Purple Tech */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent - Cyan Tech */
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Portfolio Specific Colors */
+    --hero-gradient-start: 217 91% 60%;
+    --hero-gradient-end: 262 83% 58%;
+    --section-bg: 220 14% 98%;
+    --skill-progress: 189 94% 43%;
+    
+    /* Shadows */
+    --shadow-card: 0deg 1px 3px hsl(220 14% 96%);
+    --shadow-card-hover: 0deg 4px 12px hsl(217 91% 60% / 0.15);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base Colors - Dark Mode */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    /* Card System - Dark */
+    --card: 222 84% 6%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover - Dark */
+    --popover: 222 84% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Bright Blue in Dark */
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 84% 4.9%;
+    --primary-glow: 217 91% 75%;
+
+    /* Secondary - Purple in Dark */
+    --secondary: 262 83% 65%;
+    --secondary-foreground: 222 84% 4.9%;
+
+    /* Accent - Cyan in Dark */
+    --accent: 189 94% 50%;
+    --accent-foreground: 222 84% 4.9%;
+
+    /* Muted - Dark */
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 65%;
+
+    /* Destructive - Dark */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs - Dark */
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 217 91% 65%;
+
+    /* Portfolio Specific - Dark Mode */
+    --hero-gradient-start: 217 91% 65%;
+    --hero-gradient-end: 262 83% 65%;
+    --section-bg: 222 84% 6%;
+    --skill-progress: 189 94% 50%;
+    
+    /* Shadows - Dark */
+    --shadow-card: 0deg 2px 8px hsl(222 84% 2% / 0.8);
+    --shadow-card-hover: 0deg 8px 25px hsl(217 91% 65% / 0.2);
+    --shadow-glow: 0 0 50px hsl(217 91% 65% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+  }
+
+  /* Section Background */
+  .section-bg {
+    background-color: hsl(var(--section-bg));
+  }
+
+  /* Card Styles */
+  .portfolio-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 2px);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Skill Progress Bar */
+  .skill-progress {
+    background: linear-gradient(90deg, hsl(var(--skill-progress)), hsl(var(--accent)));
+    border-radius: 9999px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glowing Button */
+  .glow-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary-glow) / 0.4),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+
+  .glow-button:hover::before {
+    left: 100%;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .fade-in-delay {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
