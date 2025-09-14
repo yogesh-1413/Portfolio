@@ -1,4 +1,4 @@
-# 👨‍💻 Your Name
+# 👨‍💻 Yogesh
 
 Hi, I'm Yogesh, a Computer Science student passionate about **Web Development, AI, and Software Engineering**.  
 This repository contains the code for my personal portfolio website.  
