@@ -31,7 +31,7 @@ export function ProjectsSection() {
     },
     {
       id: 2,
-      title: "AI-Powered Task Manager",
+      title: "CalcVerse",
       description: "Calcverse is a one-stop platform offering universal calculators, from currency converters to financial and scientific tools. It simplifies complex calculations with accuracy and speed.",
       longDescription: "Calcverse was designed to provide users with a comprehensive set of calculators in a single, easy-to-use platform. It covers everyday needs such as currency conversion, financial planning, and unit conversions, along with advanced scientific calculations. The goal is to reduce the hassle of switching between multiple apps or websites for different calculations. With an intuitive interface and accurate results, Calcverse ensures convenience for students, professionals, and everyday users. Ultimately, it’s a versatile tool that makes complex calculations simple and accessible to everyone.",
       technologies: ["React.js", "Tailwind", "Redux Toolkit", "Express", "PostgreSQL", "Firebase"],
