@@ -2,41 +2,29 @@ import { Code, Database, Cloud, Cpu, Palette, Users } from "lucide-react"
 
 export function SkillsSection() {
   const technicalSkills = [
-    { name: "C", level: 90, icon: Code },
-    
-    { name: "Python", level: 85, icon: Code },
-    { name: "Java", level: 85, icon: Code },
-    { name: "js(React,Node)", level: 75, icon: Code },
-    { name: "Kotlin", level: 80, icon: Code },
-    { name: "SQL/MongoDB", level: 82, icon: Database },
-    { name: "AWS/Cloud", level: 70, icon: Cloud },
-    { name: "Machine Learning", level: 75, icon: Cpu },
+    { name: "C", icon: Code },
+    { name: "Python", icon: Code },
+    { name: "Java", icon: Code },
+    { name: "JavaScript (React, Node)", icon: Code },
+    { name: "Kotlin", icon: Code },
+    { name: "SQL / MongoDB", icon: Database },
+    { name: "AWS / Cloud", icon: Cloud },
+    { name: "Machine Learning", icon: Cpu },
   ]
 
   const softSkills = [
-    { name: "Problem Solving", level: 92, icon: Cpu },
-    { name: "Critical Thinking", level: 88, icon: Users },
-    { name: "Communication", level: 85, icon: Users },
-    { name: "Leadership", level: 80, icon: Users },
-    { name: "Collaboration", level: 87, icon: Palette },
-    { name: "Time Management", level: 83, icon: Users },
+    { name: "Problem Solving", icon: Cpu },
+    { name: "Critical Thinking", icon: Users },
+    { name: "Communication", icon: Users },
+    { name: "Leadership", icon: Users },
+    { name: "Collaboration", icon: Palette },
+    { name: "Time Management", icon: Users },
   ]
 
-  const SkillBar = ({ skill }: { skill: typeof technicalSkills[0] }) => (
-    <div className="space-y-2" key={skill.name}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <skill.icon className="w-4 h-4 text-primary" />
-          <span className="text-foreground font-medium">{skill.name}</span>
-        </div>
-        <span className="text-muted-foreground text-sm">{skill.level}%</span>
-      </div>
-      <div className="w-full bg-muted rounded-full h-2">
-        <div
-          className="skill-progress h-2 rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${skill.level}%` }}
-        ></div>
-      </div>
+  const SkillItem = ({ skill }: { skill: typeof technicalSkills[0] }) => (
+    <div className="flex items-center gap-3">
+      <skill.icon className="w-5 h-5 text-primary" />
+      <span className="text-foreground font-medium">{skill.name}</span>
     </div>
   )
 
@@ -50,8 +38,7 @@ export function SkillsSection() {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              A comprehensive overview of my technical skills and soft skills 
-              developed through academic projects, internships, and personal learning.
+              A concise overview of my technical and soft skills developed through academic projects, internships, and personal learning.
             </p>
           </div>
 
@@ -61,9 +48,9 @@ export function SkillsSection() {
                 <Code className="w-6 h-6 text-primary" />
                 Technical Skills
               </h3>
-              <div className="space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {technicalSkills.map((skill, index) => (
-                  <SkillBar key={index} skill={skill} />
+                  <SkillItem key={index} skill={skill} />
                 ))}
               </div>
             </div>
@@ -73,9 +60,9 @@ export function SkillsSection() {
                 <Users className="w-6 h-6 text-accent" />
                 Soft Skills
               </h3>
-              <div className="space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {softSkills.map((skill, index) => (
-                  <SkillBar key={index} skill={skill} />
+                  <SkillItem key={index} skill={skill} />
                 ))}
               </div>
             </div>
