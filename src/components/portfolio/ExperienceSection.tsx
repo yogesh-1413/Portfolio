@@ -29,7 +29,7 @@ export function ExperienceSection() {
       ],
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT", "AWS"],
       current: false,
-      ver:'https://drive.google.com/file/d/1zQ2K8rRoXcHyhXsouYdorOgU2UifMsJP/view'
+      ver:'https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=882a9d072e32eaf9539a66b4e41c1c83'
     },
     {
       id: 3,

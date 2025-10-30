@@ -23,22 +23,22 @@ export function ProjectsSection() {
       title: "SARA Ai",
       description: " Smart Academic Resource Assistant(SARA) aims to make learning smarter and more accessible by combining AI-powered study tools, curated educational videos, and mental health support.",
       longDescription: " Smart Academic Resource Assistant (SARA):This platform was built to provide students with a smarter and more personalized way of learning. By integrating AI-powered study guides, curated educational videos, and interactive concept explanations, it simplifies complex topics and makes study time more productive. Alongside academics, it also offers a mental health chat assistant for motivation and mindfulness support. The personalized dashboard ensures learners can track their progress and receive tailored recommendations. Overall, it bridges academics and well-being in one unified platform.",
-      technologies: ["React.js", "Node.js", "Firebase", "MongoDB" , "Tailwind CSS"],
+      technologies: ["React.js", "Node.js", "Firebase", "MongoDB", "Tailwind CSS"],
       githubUrl: "https://github.com/yogesh-1413/sara",
       liveUrl: "https://sara-ai.in/",
       featured: true,
-      image: "/api/placeholder/600/400"
+      image: "/Sara.png"
     },
     {
       id: 2,
       title: "CalcVerse",
       description: "Calcverse is a one-stop platform offering universal calculators, from currency converters to financial and scientific tools. It simplifies complex calculations with accuracy and speed.",
       longDescription: "Calcverse was designed to provide users with a comprehensive set of calculators in a single, easy-to-use platform. It covers everyday needs such as currency conversion, financial planning, and unit conversions, along with advanced scientific calculations. The goal is to reduce the hassle of switching between multiple apps or websites for different calculations. With an intuitive interface and accurate results, Calcverse ensures convenience for students, professionals, and everyday users. Ultimately, it’s a versatile tool that makes complex calculations simple and accessible to everyone.",
-      technologies: ["React.js", "Tailwind", "Redux Toolkit", "Express", "PostgreSQL", "Firebase"],
+      technologies: ["React.js", "Tailwind", "Express", "Node.js", "Firebase"],
       githubUrl: "https://github.com/yogesh-1413/CalcVerse",
-      liveUrl: "https://github.com/yogesh-1413/CalcVerse",
+      liveUrl: "https://calcverse.onrender.com/",
       featured: true,
-      image: "/api/placeholder/600/400"
+      image: "/CalcVerse.png"
     },
 
   ]
@@ -57,7 +57,7 @@ export function ProjectsSection() {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              A showcase of my recent work and personal projects that demonstrate 
+              A showcase of my recent work and personal projects that demonstrate
               my technical skills and problem-solving abilities.
             </p>
           </div>
@@ -67,17 +67,28 @@ export function ProjectsSection() {
               <div key={project.id} className="portfolio-card p-8">
                 <div className="grid lg:grid-cols-3 gap-8">
                   <div className="lg:col-span-1">
-                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <Github className="w-8 h-8 text-primary" />
-                          </div>
-                          <p className="text-sm text-muted-foreground">Project Preview</p>
-                        </div>
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden cursor-pointer group relative"
+                      onClick={() => project.liveUrl && window.open(project.liveUrl, "_blank")}
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p className="text-white font-medium flex items-center gap-2">
+                          <ExternalLink className="w-4 h-4" /> Visit Site
+                        </p>
                       </div>
                     </div>
+                    <div className="flex flex-col items-center justify-center text-sm mt-4 text-muted-foreground">
+                      
+                    <p>{project.title} Preview</p>  
+                    </div>
                   </div>
+                  
 
                   <div className="lg:col-span-2">
                     <div className="flex items-start justify-between mb-4">
@@ -109,8 +120,8 @@ export function ProjectsSection() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         className="hover:bg-primary hover:text-primary-foreground"
                         onClick={() => window.open(project.githubUrl, "_blank")}
@@ -118,12 +129,12 @@ export function ProjectsSection() {
                         <Github className="w-4 h-4 mr-2" />
                         View Code
                       </Button>
-                      
+
                       {project.liveUrl && (
-                        <Button 
+                        <Button
                           size="sm"
                           className="bg-accent hover:bg-accent/90"
-                          onClick={()=> window.open(project.liveUrl, "_blank")}
+                          onClick={() => window.open(project.liveUrl, "_blank")}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Live Demo
@@ -155,8 +166,8 @@ export function ProjectsSection() {
 
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" className="glow-button"
-            onClick={()=> window.open("https://github.com/yogesh-1413?tab=repositories", "_blank")
-            }
+              onClick={() => window.open("https://github.com/yogesh-1413?tab=repositories", "_blank")
+              }
             >
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
