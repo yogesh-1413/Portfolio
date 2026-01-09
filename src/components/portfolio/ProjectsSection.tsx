@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { title } from "process"
 
 interface Project {
   id: number
@@ -39,6 +40,17 @@ export function ProjectsSection() {
       liveUrl: "https://calcverse.onrender.com/",
       featured: true,
       image: "/CalcVerse.png"
+    },
+    {
+      id: 3,
+      title: "Web Scraper",
+      description: "A full-stack web application that scrapes chat and article content from external URLs, stores it in a structured database, and leverages AI to regenerate improved, topic-consistent content on demand through a user-friendly React interface.",
+      longDescription :"The AI-Powered Web Content Scraper & Regenerator is a full-stack application that extracts chat and article content from external URLs using a backend built with PHP and Java. The scraped data is processed and stored in a structured SQLite database for efficient retrieval. The system integrates an AI-based regeneration feature that allows users to regenerate refined, topic-consistent content on demand. A Regenerate action enables iterative content enhancement without manual rewriting. The frontend is developed using React to dynamically display both scraped and regenerated content. The project demonstrates end-to-end full-stack development, combining scraping, AI integration, and responsive UI design.",
+      technologies: ["Java", "SQL Lite", "React.js"],
+      githubUrl :"https://github.com/yogesh-1413/beyondchats-scraper",
+      liveUrl : "https://beyondchats-frontend-production-cdf5.up.railway.app/",
+      featured: true,
+      image:"/Scrapper.png"
     },
 
   ]
