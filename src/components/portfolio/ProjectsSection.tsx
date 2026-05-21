@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { title } from "process"
+
 
 interface Project {
   id: number
@@ -26,7 +26,7 @@ export function ProjectsSection() {
       longDescription: " Smart Academic Resource Assistant (SARA):This platform was built to provide students with a smarter and more personalized way of learning. By integrating AI-powered study guides, curated educational videos, and interactive concept explanations, it simplifies complex topics and makes study time more productive. Alongside academics, it also offers a mental health chat assistant for motivation and mindfulness support. The personalized dashboard ensures learners can track their progress and receive tailored recommendations. Overall, it bridges academics and well-being in one unified platform.",
       technologies: ["React.js", "Node.js", "Firebase", "MongoDB", "Tailwind CSS"],
       githubUrl: "https://github.com/yogesh-1413/sara",
-      liveUrl: "https://sara-ai.in/",
+      liveUrl: "https://sara-ai-1413.web.app/",
       featured: true,
       image: "/Sara.png"
     },
