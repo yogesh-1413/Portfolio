@@ -70,7 +70,7 @@ export function HeroSection() {
             <Button 
               size="lg" 
               className="glow-button bg-accent hover:bg-accent/90"
-              onClick={() => window.open("https://drive.google.com/file/d/15Hbwcmb2l38d7kqg89m20hPYus6MK7hD/view?usp=drive_link", "_blank")}
+              onClick={() => window.open("https://drive.google.com/file/d/15Hbwcmb2l38d7kqg89m20hPYus6MK7hD/view?usp=sharing", "_blank")}
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
